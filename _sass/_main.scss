@@ -72,7 +72,8 @@ h5 {
     }
 
 .caption {
-  font-size: 20px;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .tekstcover {
@@ -162,4 +163,16 @@ small {
   padding: 30px;
   text-align: center;
   word-spacing: 60px;
+}
+
+.copyright {
+  word-spacing: 0px;
+}
+
+/* Social Meda */
+.sprite {
+  background-image: url(images/sprite.jpg)
+  display: inline-block;
+  height: 30px;
+  width: 30px;
 }
