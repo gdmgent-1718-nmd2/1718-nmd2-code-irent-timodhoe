@@ -1,3 +1,165 @@
 @import
   "bootstrap-variables",                  // See _bootstrap-variables.scss
   "../_vendor/bootstrap/scss/bootstrap";  // See _vendor/bootstrap/scss/bootstrap.scss
+
+/* Algemeen */
+body {
+  font-family: 'josefin sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  background-color: #FF643F;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  line-height: 63px;
+}
+
+h2 {
+  font-family: 'Amatic SC' , cursive;
+  font-size: 40px;
+  line-height: 45px;
+}
+
+h5 {
+  font-family: 'Amatic SC' , cursive;
+  font-size: 20px;
+}
+
+.btn-primary{
+  background: #FFDA57;
+  border: none;
+  border-radius: 0px;
+  font-family: 'Amatic SC' , cursive;
+  font-size: 20px;
+}
+
+.img-fluid{
+  max-height: 500px;
+}
+
+/* Frontpage + header*/
+.img {
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+
+.img-title {
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  color: whitesmoke;
+}
+
+.btn-quote{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: whitesmoke;
+  }
+
+.quote{
+    position: absolute;
+    text-align: right;
+    top: 80px;
+    left: 20px;
+    right: 20px;
+    color: #fff;
+    }
+
+.caption {
+  font-size: 20px;
+}
+
+.tekstcover {
+  position: relative;
+}
+
+/* knop effecten */
+.btn:after,
+.btn:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0); 
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+  background-color: #FFDA57;
+}
+
+.btn:hover:after,
+.btn:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+  background-color: #FFDA57;
+}
+
+.btn:hover:before {
+  bottom: auto;
+  top: 0;
+}
+
+.btn-block {
+  margin-bottom: 20px;
+}
+
+/* Praktisch */
+.card {
+  background-color: #FFDA57;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.card-body {
+  background-color: #868686;
+  border: none;
+}
+
+h5>a:hover {
+  text-decoration: none;
+}
+
+.card:active {
+  background: #FF643F;
+}
+
+/* Contact */
+input[type="name"], textarea{
+  background-color: #FFDA57;
+  border: none;
+}
+
+input[type="email"], textarea{
+  background-color: #FFDA57;
+  border: none;
+}
+
+.form-control{
+  background-color: #FFDA57;
+  border: none;
+}
+
+small {
+  line-height: 12px;
+}
+
+.adres {
+
+}
+
+/* Footer */
+.footer {
+  background: #7D7D7D;
+  padding: 30px;
+  text-align: center;
+  word-spacing: 60px;
+}
