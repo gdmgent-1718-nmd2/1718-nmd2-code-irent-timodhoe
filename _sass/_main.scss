@@ -9,7 +9,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #fff;
-  background-color: #FF643F;
+  background-color: #4abdac;
 }
 
 h1 {
@@ -30,7 +30,7 @@ h5 {
 }
 
 .btn-primary{
-  background: #FFDA57;
+  background: #f7b733;
   border: none;
   border-radius: 0px;
   font-family: 'Amatic SC' , cursive;
@@ -41,25 +41,54 @@ h5 {
   max-height: 500px;
 }
 
+/* Navigatie */
+.navbar-nav {
+  background-color: #fdce3
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: #FFDA57;
+}
+
+.navbar-toggler:active {
+  border: 1px;
+  background-color: #FF643F;
+}
+
+.nav-link {
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-link:hover {
+  background-color:#fc4a1a;
+}
+
+.nav-link:active {
+  text-decoration: underline;
+}
+
 /* Frontpage + header*/
 .img {
   position: relative;
   float: left;
   margin-bottom: 15px;
+  width: 100vw;
 }
 
 .img-title {
   position: absolute;
   bottom: 5px;
   right: 20px;
-  color: whitesmoke;
+  color: rgb(245, 245, 245);
 }
 
 .btn-quote{
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: whitesmoke;
+  color: rgb(245, 245, 245);
   }
 
 .quote{
@@ -68,7 +97,7 @@ h5 {
     top: 80px;
     left: 20px;
     right: 20px;
-    color: #fff;
+    color: rgb(245, 245, 245);
     }
 
 .caption {
@@ -81,10 +110,10 @@ h5 {
 }
 
 /* knop effecten */
-.btn:after,
-.btn:before {
+.btn-primary:after,
+.btn-primary:before {
   backface-visibility: hidden;
-  border: 1px solid rgba(#fff, 0); 
+  border: 1px solid rgb(245, 245, 245); 
   bottom: 0px;
   content: " ";
   display: block;
@@ -95,13 +124,14 @@ h5 {
   background-color: #FFDA57;
 }
 
-.btn:hover:after,
-.btn:hover:before {
+.btn-primary:hover:after,
+.btn-primary:hover:before {
   backface-visibility: hidden;
-  border-color: #fff;
+  border-color: rgb(245, 245, 245);
   transition: width 350ms ease-in-out;
   width: 70%;
-  background-color: #FFDA57;
+  background-color: #f7b733;
+
 }
 
 .btn:hover:before {
@@ -113,15 +143,25 @@ h5 {
   margin-bottom: 20px;
 }
 
+.btn-block:hover {
+  opacity: 0.5;
+}
+
+/* Gerda-pagina */
+.prijs {
+  font-size: 24px;
+  line-height: 24px;
+}
+
 /* Praktisch */
 .card {
-  background-color: #FFDA57;
+  background-color: #f7b733;
   border: none;
   margin-bottom: 20px;
 }
 
 .card-body {
-  background-color: #868686;
+  background-color: #4abdac;
   border: none;
 }
 
@@ -130,22 +170,31 @@ h5>a:hover {
 }
 
 .card:active {
-  background: #FF643F;
+  background: #4abdac;
+  border: none;
+}
+
+.vraag {
+ color: rgb(245, 245, 245);
+}
+
+.vraag:hover {
+  opacity: 0.5;
 }
 
 /* Contact */
 input[type="name"], textarea{
-  background-color: #FFDA57;
+  background-color: #dfdce3;
   border: none;
 }
 
 input[type="email"], textarea{
-  background-color: #FFDA57;
+  background-color: #dfdce3;
   border: none;
 }
 
 .form-control{
-  background-color: #FFDA57;
+  background-color: #dfdce3;
   border: none;
 }
 
@@ -153,8 +202,22 @@ small {
   line-height: 12px;
 }
 
-.adres {
+.tel {
+  color: #fff;
+  text-decoration: underline;
+}
 
+.tel:hover {
+  opacity: 0.5;
+}
+
+.tel:active {
+  color: #f7b733;
+}
+
+/* Bevestiging pagina */
+.tijdstip {
+  text-decoration: underline;
 }
 
 /* Footer */
@@ -165,13 +228,32 @@ small {
   word-spacing: 60px;
 }
 
+.foot {
+  color: rgb(245, 245, 245);
+}
+
+.foot:hover {
+  color: rgb(245, 245, 245);
+  text-decoration: underline;
+  opacity: 0.5
+}
+
+.foot:active {
+  color: #f7b733;
+  text-decoration: underline;
+}
+
 .copyright {
   word-spacing: 0px;
 }
 
-/* Social Meda */
+.copyright:hover {
+  opacity: 0.5
+}
+
+/* Social Media */
 .sprite {
-  background-image: url(images/sprite.jpg);
+  background-image:url(/assets/css/sprite.jpg);
   display: inline-block;
   height: 30px;
   width: 30px;
