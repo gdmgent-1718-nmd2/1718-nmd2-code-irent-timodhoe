@@ -9,7 +9,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  color: #fff;
+  color: $wit;
   background-color: $groen;
 }
 
@@ -58,9 +58,13 @@ h5 {
   font-family: $titel-font;
   font-size: 30px;
   text-align: center;
+  padding-top: 20px;
 }
 .nav-link:hover {
-  background-color: $rood;
+  background-color: $geel;
+  margin-top: -5px;
+  font-size: 35px;
+  transition: 0.2s;
 }
 
 .nav-link:active {
@@ -79,23 +83,24 @@ h5 {
   position: absolute;
   bottom: 5px;
   right: 20px;
-  color: rgb(245, 245, 245);
+  color: $wit;
 }
 
 .btn-quote{
   position: absolute;
   bottom: 10px;
-  left: 10px;
-  color: rgb(245, 245, 245);
+  left: 20px;
+  color: $wit;
   }
 
 .quote{
     position: absolute;
     text-align: right;
-    top: 80px;
+    top: 20%;
     left: 20px;
-    right: 20px;
-    color: rgb(245, 245, 245);
+    right: 50px;
+    color: $wit;
+    text-shadow: 1px 1px #000000;
     }
 
 .caption {
@@ -111,7 +116,7 @@ h5 {
 .btn-primary:after,
 .btn-primary:before {
   backface-visibility: hidden;
-  border: 1px solid rgb(245, 245, 245); 
+  border: 1px solid $wit; 
   bottom: 0px;
   content: " ";
   display: block;
@@ -125,7 +130,7 @@ h5 {
 .btn-primary:hover:after,
 .btn-primary:hover:before {
   backface-visibility: hidden;
-  border-color: rgb(245, 245, 245);
+  border-color: $wit;
   transition: width 350ms ease-in-out;
   width: 70%;
   background-color: $geel;
@@ -173,7 +178,7 @@ h5>a:hover {
 }
 
 .vraag {
- color: rgb(245, 245, 245);
+ color: $wit;
 }
 
 .vraag:hover {
@@ -227,11 +232,11 @@ small {
 }
 
 .foot {
-  color: rgb(245, 245, 245);
+  color: $wit;
 }
 
 .foot:hover {
-  color: rgb(245, 245, 245);
+  color: $wit;
   text-decoration: underline;
   opacity: 0.5
 }
@@ -259,7 +264,7 @@ small {
   margin-right: -20px;
 }
 
-/* logo */
+/* sprites-logo */
 .logo {
   height: 80px;
   width: 170px;
@@ -278,7 +283,7 @@ small {
   opacity: 0.5;
 }
 
-/* Social Media */
+/* sprites-Social Media */
 .social-facebook {
 height: 30px;
 width: 30px;
@@ -325,13 +330,27 @@ margin-right: -50px;
   opacity: 0.5;
 }
 
+.center-footer {
+  margin-top: 10px;
+  margin-left: -170px;
+}
+
+/* Media Queries */
 @media (min-width: 768px) {
-.container{
-    background-color: red;}
 .nav-link {
-      font-family: $titel-font;
-      font-size: 30px;
-      text-align: center;
-      padding-top: 52px;
+    font-family: $titel-font;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 52px;
+    }
+.nav-link:active {
+    text-decoration: none;
+    font-size: 50px;
+    color: $geel;
+    text-shadow: 2px 2px #ff0000;
+    }
+.quote{
+    top: 300px;
+    right: 50px;
     }
   }
