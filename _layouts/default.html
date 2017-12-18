@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title | strip_html }}</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/css/app.scss %}">
@@ -13,7 +13,7 @@
 <body>
     {% include nav.html %}
     <div class="img">
-        <img src="{{ site.baseurl }}/{{ page.header-image }}" class="img-fluid" alt="{{ page.title }}">
+        <img src="{{ site.baseurl }}/{{ page.header-image }}" class="img-fluid" alt="{{ page.title | strip_html }}">
         <div class="quote">
             <div class="row">
                 <div class="col-12">

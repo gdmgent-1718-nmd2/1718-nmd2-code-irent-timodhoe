@@ -4,36 +4,37 @@
 
 /* Algemeen */
 body {
-  font-family: 'josefin sans', sans-serif;
+  font-family: $body-font;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   color: #fff;
-  background-color: #4abdac;
+  background-color: $groen;
+}
+
+h1, h2, h5 {
+  font-family: $titel-font;
 }
 
 h1 {
-  font-family: 'Amatic SC', cursive;
   font-size: 50px;
   line-height: 63px;
 }
 
 h2 {
-  font-family: 'Amatic SC' , cursive;
   font-size: 40px;
   line-height: 45px;
 }
 
 h5 {
-  font-family: 'Amatic SC' , cursive;
   font-size: 20px;
 }
 
 .btn-primary{
-  background: #f7b733;
+  background: $geel;
   border: none;
   border-radius: 0px;
-  font-family: 'Amatic SC' , cursive;
+  font-family: $titel-font;
   font-size: 20px;
 }
 
@@ -42,27 +43,31 @@ h5 {
 }
 
 /* Navigatie */
+.navbar {
+  background-attachment: $blauw;
+}
+
 .navbar-nav {
-  background-color: #fdce3
+  background-color: $blauw;
 }
 
 .navbar-toggler {
   border: none;
-  background-color: #FFDA57;
+  background-color: $geel;
 }
 
 .navbar-toggler:active {
   border: 1px;
-  background-color: #FF643F;
+  background-color: $blauw;
 }
 
 .nav-link {
-  font-family: 'Amatic SC', cursive;
+  font-family: $titel-font;
   font-size: 20px;
   text-align: center;
 }
 .nav-link:hover {
-  background-color:#fc4a1a;
+  background-color: $rood;
 }
 
 .nav-link:active {
@@ -121,7 +126,7 @@ h5 {
   position: relative;
   transition: all 280ms ease-in-out;
   width: 0;
-  background-color: #FFDA57;
+  background-color: $geel;
 }
 
 .btn-primary:hover:after,
@@ -130,7 +135,7 @@ h5 {
   border-color: rgb(245, 245, 245);
   transition: width 350ms ease-in-out;
   width: 70%;
-  background-color: #f7b733;
+  background-color: $geel;
 
 }
 
@@ -155,13 +160,13 @@ h5 {
 
 /* Praktisch */
 .card {
-  background-color: #f7b733;
+  background-color: $geel;
   border: none;
   margin-bottom: 20px;
 }
 
 .card-body {
-  background-color: #4abdac;
+  background-color: $groen;
   border: none;
 }
 
@@ -170,7 +175,7 @@ h5>a:hover {
 }
 
 .card:active {
-  background: #4abdac;
+  background: $groen;
   border: none;
 }
 
@@ -184,17 +189,17 @@ h5>a:hover {
 
 /* Contact */
 input[type="name"], textarea{
-  background-color: #dfdce3;
+  background-color: $blauw;
   border: none;
 }
 
 input[type="email"], textarea{
-  background-color: #dfdce3;
+  background-color: $blauw;
   border: none;
 }
 
 .form-control{
-  background-color: #dfdce3;
+  background-color: $blauw;
   border: none;
 }
 
@@ -212,7 +217,7 @@ small {
 }
 
 .tel:active {
-  color: #f7b733;
+  color: $geel;
 }
 
 /* Bevestiging pagina */
@@ -239,7 +244,7 @@ small {
 }
 
 .foot:active {
-  color: #f7b733;
+  color: $geel;
   text-decoration: underline;
 }
 
@@ -251,10 +256,19 @@ small {
   opacity: 0.5
 }
 
-/* Social Media */
+/* Sprites */
 .sprite {
-  background-image:url(/assets/css/sprite.jpg);
   display: inline-block;
   height: 30px;
   width: 30px;
+}
+
+/* logo */
+.logo {
+background-position: 0 -60px;
+}
+
+/* Social Media */
+.social-media {
+
 }

@@ -10,11 +10,20 @@
 
 $indigo:  #6610f2;
 $primary: $indigo;
+$groen: #4abdac;
+$geel: #f7b733;
+$blauw: #dfdce3;
+$rood: #FF643F;
 
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
 
 $font-family-base: Merriweather, serif;
+$titel-font: 'Amatic SC', cursive;
+$body-font: 'josefin sans', sans-serif;
