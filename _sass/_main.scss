@@ -2,6 +2,7 @@
   "bootstrap-variables",                  // See _bootstrap-variables.scss
   "../_vendor/bootstrap/scss/bootstrap";  // See _vendor/bootstrap/scss/bootstrap.scss
 
+
 /* Algemeen */
 body {
   font-family: $body-font;
@@ -43,14 +44,6 @@ h5 {
 }
 
 /* Navigatie */
-.navbar {
-  background-attachment: $blauw;
-}
-
-.navbar-nav {
-  background-color: $blauw;
-}
-
 .navbar-toggler {
   border: none;
   background-color: $geel;
@@ -58,12 +51,12 @@ h5 {
 
 .navbar-toggler:active {
   border: 1px;
-  background-color: $blauw;
+  background-color: $rood;
 }
 
 .nav-link {
   font-family: $titel-font;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
 }
 .nav-link:hover {
@@ -261,14 +254,84 @@ small {
   display: inline-block;
   height: 30px;
   width: 30px;
+  background-image: url('sprites-igoat.svg');
+  background-size: 100%;
+  margin-right: -20px;
 }
 
 /* logo */
 .logo {
-background-position: 0 -60px;
+  height: 80px;
+  width: 170px;
+  background-size: 800%;
+  background-position-y: -163px;
+}
+
+.logo:hover {
+  height: 80px;
+  width: 170px;
+  background-size: 800%;
+  background-position-y: -245px;
+}
+
+.logo:active {
+  opacity: 0.5;
 }
 
 /* Social Media */
-.social-media {
-
+.social-facebook {
+height: 30px;
+width: 30px;
+background-size: 1650%;
+margin-right: -50px;
 }
+
+.social-facebook:hover {
+  background-position-y: -30px;
+}
+
+.social-facebook:active {
+  opacity: 0.5;
+}
+
+.social-twitter {
+  height: 30px;
+  width: 30px;
+  background-size: 1550%;
+  background-position-x: -30px;
+  margin-right: -50px;
+}
+
+.social-twitter:hover {
+  background-position-y: -28px;
+}
+
+.social-twitter:active {
+  opacity: 0.5;
+}
+
+.social-instagram {
+  height: 30px;
+  width: 30px;
+  background-size: 1650%;
+  background-position-x: -65px;
+}
+
+.social-instagram:hover {
+  background-position-y: -30px;
+}
+
+.social-instagram:active {
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+.container{
+    background-color: red;}
+.nav-link {
+      font-family: $titel-font;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 52px;
+    }
+  }
