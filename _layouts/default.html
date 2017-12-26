@@ -23,18 +23,13 @@
         </div>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                {{ content }}
-            </div>
+        {{ content }}
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {% include footer.html %}
         </div>
     </div>
-
-        <div class="row">
-            <div class="col-12">
-                {% include footer.html %}
-            </div>
-        </div>
 
     {% include scripts-bottom.html %}
 </body>

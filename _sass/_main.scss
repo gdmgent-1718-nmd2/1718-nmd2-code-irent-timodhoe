@@ -47,11 +47,11 @@ h5 {
 .navbar-toggler {
   border: none;
   background-color: $geel;
-}
 
-.navbar-toggler:active {
-  border: 1px;
-  background-color: $rood;
+  &:active {
+    border: 1px;
+    background-color: $rood;
+  }
 }
 
 .nav-link {
@@ -59,12 +59,13 @@ h5 {
   font-size: 30px;
   text-align: center;
   padding-top: 20px;
-}
-.nav-link:hover {
-  background-color: $geel;
-  margin-top: -5px;
-  font-size: 35px;
-  transition: 0.2s;
+
+  &:hover {
+    background-color: $geel;
+    margin-top: -5px;
+    font-size: 35px;
+    transition: 0.2s;
+  }
 }
 
 .nav-link:active {
@@ -109,14 +110,15 @@ h5 {
 }
 
 .tekstcover {
+  font-family: $body-font;
+  font-weight: normal;
   position: relative;
 }
 
 /* knop effecten */
-.btn-primary:after,
-.btn-primary:before {
-  backface-visibility: hidden;
-  border: 1px solid $wit; 
+
+.btn-primary {
+  backface-visibility: hidden; 
   bottom: 0px;
   content: " ";
   display: block;
@@ -125,29 +127,30 @@ h5 {
   transition: all 280ms ease-in-out;
   width: 0;
   background-color: $geel;
-}
 
-.btn-primary:hover:after,
-.btn-primary:hover:before {
-  backface-visibility: hidden;
-  border-color: $wit;
-  transition: width 350ms ease-in-out;
-  width: 70%;
-  background-color: $geel;
+  &:hover {
+    backface-visibility: hidden;
+    border-color: $wit;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+    background-color: $geel;
+  }
 
-}
-
-.btn:hover:before {
-  bottom: auto;
-  top: 0;
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .btn-block {
   margin-bottom: 20px;
-}
 
-.btn-block:hover {
-  opacity: 0.5;
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    background-color: red;
+  }
 }
 
 /* Gerda-pagina */
@@ -161,6 +164,11 @@ h5 {
   background-color: $geel;
   border: none;
   margin-bottom: 20px;
+  
+  &:active {
+    background: $groen;
+    border: none;
+  }
 }
 
 .card-body {
@@ -172,17 +180,12 @@ h5>a:hover {
   text-decoration: none;
 }
 
-.card:active {
-  background: $groen;
-  border: none;
-}
-
 .vraag {
  color: $wit;
-}
 
-.vraag:hover {
-  opacity: 0.5;
+ &:hover {
+   opacity: 0.5;
+ }
 }
 
 /* Contact */
@@ -208,14 +211,14 @@ small {
 .tel {
   color: #fff;
   text-decoration: underline;
-}
 
-.tel:hover {
-  opacity: 0.5;
-}
+  &:hover {
+    opacity: 0.5;
+  }
 
-.tel:active {
-  color: $geel;
+  &:active: {
+    color: $geel;
+  }
 }
 
 /* Bevestiging pagina */
@@ -233,25 +236,25 @@ small {
 
 .foot {
   color: $wit;
-}
 
-.foot:hover {
-  color: $wit;
-  text-decoration: underline;
-  opacity: 0.5
-}
+  &:hover {
+    color: $wit;
+    text-decoration: underline;
+    opacity: 0.5;
+  }
 
-.foot:active {
-  color: $geel;
-  text-decoration: underline;
+  &:active {
+    color: $geel;
+    text-decoration: underline;
+  }
 }
 
 .copyright {
   word-spacing: 0px;
-}
 
-.copyright:hover {
-  opacity: 0.5
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 /* Sprites */
@@ -270,33 +273,33 @@ small {
   width: 170px;
   background-size: 800%;
   background-position-y: -163px;
-}
 
-.logo:hover {
-  height: 80px;
-  width: 170px;
-  background-size: 800%;
-  background-position-y: -245px;
-}
+  &:hover {
+    height: 80px;
+    width: 170px;
+    background-size: 800%;
+    background-position-y: -245px;
+  }
 
-.logo:active {
-  opacity: 0.5;
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 /* sprites-Social Media */
 .social-facebook {
-height: 30px;
-width: 30px;
-background-size: 1650%;
-margin-right: -50px;
-}
+  height: 30px;
+  width: 30px;
+  background-size: 1650%;
+  margin-right: -50px;
 
-.social-facebook:hover {
-  background-position-y: -30px;
-}
+  &:hover{
+    background-position-y: -30px;
+  }
 
-.social-facebook:active {
-  opacity: 0.5;
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .social-twitter {
@@ -305,14 +308,14 @@ margin-right: -50px;
   background-size: 1550%;
   background-position-x: -30px;
   margin-right: -50px;
-}
 
-.social-twitter:hover {
-  background-position-y: -28px;
-}
+  &:hover {
+    background-position-y: -28px;
+  }
 
-.social-twitter:active {
-  opacity: 0.5;
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .social-instagram {
@@ -320,19 +323,27 @@ margin-right: -50px;
   width: 30px;
   background-size: 1650%;
   background-position-x: -65px;
-}
 
-.social-instagram:hover {
-  background-position-y: -30px;
-}
+  &:hover {
+    background-position-y: -30px;
+  }
 
-.social-instagram:active {
-  opacity: 0.5;
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .center-footer {
-  margin-top: 10px;
-  margin-left: -170px;
+  margin-top: 50vw;
+  margin-left: 50vw;
+}
+
+/* iFrame en adres*/
+.embed-responsive {
+  height: 30vw;
+  width: 40vw;
+  margin-left: 1vw;
+  margin-right: 10vw;
 }
 
 /* Media Queries */
@@ -343,14 +354,15 @@ margin-right: -50px;
     text-align: center;
     padding-top: 52px;
     }
+
 .nav-link:active {
     text-decoration: none;
     font-size: 50px;
     color: $geel;
     text-shadow: 2px 2px #ff0000;
     }
-.quote{
+
+.quote {
     top: 300px;
     right: 50px;
-    }
   }
