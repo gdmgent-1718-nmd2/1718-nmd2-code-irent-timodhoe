@@ -40,7 +40,8 @@ h5 {
 }
 
 .img-fluid{
-  max-height: 500px;
+  max-height: 400px;
+  width: 100vw;
 }
 
 /* Navigatie */
@@ -105,8 +106,8 @@ h5 {
     }
 
 .caption {
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .tekstcover {
@@ -116,9 +117,20 @@ h5 {
 }
 
 /* knop effecten */
-
 .btn-primary {
-  backface-visibility: hidden; 
+  letter-spacing: 0;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  letter-spacing: 5px;
+  transition: 850ms;
+}
+
+.btn-primary:after,
+.btn-primary:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
   bottom: 0px;
   content: " ";
   display: block;
@@ -126,19 +138,20 @@ h5 {
   position: relative;
   transition: all 280ms ease-in-out;
   width: 0;
-  background-color: $geel;
+}
 
-  &:hover {
-    backface-visibility: hidden;
-    border-color: $wit;
-    transition: width 350ms ease-in-out;
-    width: 70%;
-    background-color: $geel;
-  }
+.btn-primary:hover:after,
+.btn-primary:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
 
-  &:active {
-    opacity: 0.5;
-  }
+.btn-primary:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
 }
 
 .btn-block {
@@ -216,9 +229,15 @@ small {
     opacity: 0.5;
   }
 
-  &:active: {
+  &:active {
     color: $geel;
   }
+}
+
+/* Account */
+.hulptekst {
+  margin-top: -10px;
+  margin-bottom: 30px;
 }
 
 /* Bevestiging pagina */
@@ -334,8 +353,8 @@ small {
 }
 
 .center-footer {
-  margin-top: 50vw;
-  margin-left: 50vw;
+  margin-top: 1vw;
+  margin-left: -15vw;
 }
 
 /* iFrame en adres*/
@@ -344,6 +363,67 @@ small {
   width: 40vw;
   margin-left: 1vw;
   margin-right: 10vw;
+}
+
+/* Popup Windows */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(245, 245, 245, .5);
+  transition: 50ms; 
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  color: #000;
+}
+
+.popup>h2 {
+  margin-top: 0;
+  color: #000;
+  font-family: $body-font;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
 }
 
 /* Media Queries */
@@ -365,4 +445,11 @@ small {
 .quote {
     top: 300px;
     right: 50px;
+    }
+
+    .caption {
+      font-size: 30px;
+      line-height: 30px;
+      margin-top: -200px;
+    }
   }

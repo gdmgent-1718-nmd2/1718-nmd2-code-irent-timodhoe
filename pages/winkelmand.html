@@ -49,4 +49,13 @@ header-image: assets/images/winkelmand.jpg
         Ik ga akkoord met de algemene voorwaarden
     </div>
     <a class="btn btn-block btn-primary" href="{{'registeren/'|relative_url}}">Naar de kassa</a>
-    <button type="button" class="btn btn-block btn-primary" href:"#">Winkelwagen leegmaken</button>
+    <a class="btn btn-block btn-primary" href="#popup">Winkelwagen leegmaken</a>
+
+<!-- popup window -->
+<div id="popup" class="overlay">
+	<div class="popup">
+		<p>Uw winkelwagen werd leeg gemaakt</p>
+		<a class="close" href="#">&times;</a>
+		<div class="content"></div>
+	</div>
+</div>
