@@ -31,7 +31,7 @@ h5 {
   font-size: 20px;
 }
 
-.btn-primary{
+.btn-primary {
   background: $geel;
   border: none;
   border-radius: 0px;
@@ -39,7 +39,7 @@ h5 {
   font-size: 20px;
 }
 
-.img-fluid{
+.img-fluid {
   max-height: 400px;
   width: 100vw;
 }
@@ -48,6 +48,7 @@ h5 {
 .navbar-toggler {
   border: none;
   background-color: $geel;
+  margin-top: 30px;
 
   &:active {
     border: 1px;
@@ -63,14 +64,15 @@ h5 {
 
   &:hover {
     background-color: $geel;
-    margin-top: -5px;
-    font-size: 35px;
+    padding-top: -20px;
+    margin-top: -2px;
+    font-size: 32px;
     transition: 0.2s;
   }
-}
 
-.nav-link:active {
-  text-decoration: underline;
+  &:active {
+    text-decoration: underline;
+  }
 }
 
 /* Frontpage + header*/
@@ -88,7 +90,7 @@ h5 {
   color: $wit;
 }
 
-.btn-quote{
+.btn-quote {
   position: absolute;
   bottom: 10px;
   left: 20px;
@@ -173,11 +175,26 @@ h5 {
 }
 
 /* Praktisch */
+.faq {
+  color: $blauw;
+  margin-bottom: 20px;
+  margin-left: 5vw;
+  margin-right: -50px;
+  width: 50vw;
+}
+
 .card {
   background-color: $geel;
   border: none;
   margin-bottom: 20px;
-  
+  margin-left: 50px;
+  color: $blauw;
+
+  &:hover {
+    background-color: $blauw;
+    transition: 0.2ms;
+  }
+
   &:active {
     background: $groen;
     border: none;
@@ -234,6 +251,9 @@ small {
   }
 }
 
+/* Over Ons */
+
+
 /* Account */
 .hulptekst {
   margin-top: -10px;
@@ -250,11 +270,11 @@ small {
   background: #7D7D7D;
   padding: 30px;
   text-align: center;
-  word-spacing: 60px;
 }
 
 .foot {
   color: $wit;
+  font-size: 12px;
 
   &:hover {
     color: $wit;
@@ -268,7 +288,11 @@ small {
   }
 }
 
-.copyright {
+.justify-content-center a{
+  margin-left: 50px;
+}
+
+.copyright:hover {
   word-spacing: 0px;
 
   &:hover {
@@ -281,9 +305,44 @@ small {
   display: inline-block;
   height: 30px;
   width: 30px;
-  background-image: url('sprites-igoat.svg');
+  background-image: url('sprites-igoat-v2.svg');
   background-size: 100%;
   margin-right: -20px;
+}
+
+/* sprites in nav */
+.account .sprite {
+  height: 50px;
+  width: 50px;
+  background-size: 1650%;
+  background-position-x: -220px;
+  margin-top: 20px;
+  margin-right: -10px;
+
+  &:hover {
+    background-position-y: -51px;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.winkelmand .sprite {
+  height: 50px;
+  width: 50px;
+  background-size: 1550%;
+  background-position-x: -155px;
+  margin-right: 10px;
+  margin-top: 20px;
+
+  &:hover {
+    background-position-y: -51px;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 /* sprites-logo */
@@ -310,10 +369,10 @@ small {
   height: 30px;
   width: 30px;
   background-size: 1650%;
-  margin-right: -50px;
 
   &:hover{
     background-position-y: -30px;
+    transition: 0.2s;
   }
 
   &:active {
@@ -326,10 +385,12 @@ small {
   width: 30px;
   background-size: 1550%;
   background-position-x: -30px;
-  margin-right: -50px;
+  margin-right: 15px;
+  margin-left: 20px;
 
   &:hover {
     background-position-y: -28px;
+    transition: 0.2s;
   }
 
   &:active {
@@ -342,9 +403,11 @@ small {
   width: 30px;
   background-size: 1650%;
   background-position-x: -65px;
+  margin-left: -20px;
 
   &:hover {
     background-position-y: -30px;
+    transition: 0.2s;
   }
 
   &:active {
@@ -428,28 +491,58 @@ small {
 
 /* Media Queries */
 @media (min-width: 768px) {
-.nav-link {
+  .nav-link {
     font-family: $titel-font;
     font-size: 30px;
     text-align: center;
-    padding-top: 52px;
+    margin-bottom: -35px;
+    margin-left: 20px;
     }
 
-.nav-link:active {
+  .nav-link:active {
     text-decoration: none;
     font-size: 50px;
     color: $geel;
     text-shadow: 2px 2px #ff0000;
     }
 
-.quote {
+  .quote {
     top: 300px;
     right: 50px;
     }
 
-    .caption {
-      font-size: 30px;
-      line-height: 30px;
-      margin-top: -200px;
+  .caption {
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: -200px;
     }
+  .account .sprite {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    }
+      
+  .winkelmand .sprite {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    margin-right: 40px;
+    margin-top: 30px;
+    }
+
+  .nav-link:hover {
+    transform: rotate(7deg);
+    }
+
+  .foot {
+    font-size: 16px;
   }
+
+  .tekst-kolom {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
